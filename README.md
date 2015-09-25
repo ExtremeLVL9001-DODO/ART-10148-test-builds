@@ -1,14 +1,14 @@
-ART TEAM 10148 (go team!) 
-fellow programmers, this is where we shall put new things we try
-put your test opmodes in the opmodes folder pls,
-and try to make new branches for each new idea/change
-TEST YOUR THINGS
-and when you're satisfied, merge with master
-LET THE HUNGER GAMES BEGIN (KIND OF(VS EVERYONE ELSE))
+ART TEAM 10148 (go team!)                                                 
+fellow programmers, this is where we shall put new things we try                   
+put your test opmodes in the opmodes folder pls,                            
+and try to make new branches for each new idea/change                  
+TEST YOUR THINGS               
+and when you're satisfied, merge with master                                                           
+LET THE HUNGER GAMES BEGIN (KIND OF(VS EVERYONE ELSE))   
 surprise me!!
 
 
-ps. it would be really cool if someone did the opencv for our team
+ps. it would be really cool if someone did the opencv for our team             
 pps. you know you want to
 
 
