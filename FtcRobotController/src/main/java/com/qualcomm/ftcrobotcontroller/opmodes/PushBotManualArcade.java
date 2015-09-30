@@ -26,7 +26,7 @@ public class PushBotManualArcade extends PushBotTelemetry
     // The system calls this member when the class is instantiated.
     //--------
     public PushBotManualArcade ()
-    float partytimer = 0
+    float partyTimer = 0;
 
     {
         //
@@ -75,7 +75,7 @@ public class PushBotManualArcade extends PushBotTelemetry
         // Manage the drive wheel motors.
         //
         float leftStickY = -gamepad1.left_stick_y;
-	    float leftStickX = -gamepad1.left_stick_x;
+        float leftStickX = -gamepad1.left_stick_x;
 
         // math.min and math.max compare 2 numbers and output the smallest and largest
         // thus capping drive speed to one
@@ -83,33 +83,59 @@ public class PushBotManualArcade extends PushBotTelemetry
         // don't know how to solve that yet
         // 
         // update : realised there is a clip method, don't know how to use it though
-	    float minmaxleftdrive = Math.max(Math.min( leftStickY + leftStickX, 1), -1);
+        float minmaxleftdrive = Math.max(Math.min( leftStickY + leftStickX, 1), -1);
         float minmaxrightdrive = Math.max(Math.min( leftStickY - leftStickX, 1), -1);
-        
-        
-       // party button
-       // does randomised actions while 
-        
-        float partybutton = gamepad1.left_bumper;
-        if (partybutton==true){
-        	float partytimer += 1;
-        	if (partytimer == 40){
-        		partytimer = 0
-        		float movement = Math.rand()
-        		
-        	}
-        }
 
-        //setting drive powers
-        float l_left_drive_power = (float)scale_motor_power (minmaxleftdrive);
-        float l_right_drive_power = (float)scale_motor_power (minmaxrightdrive);
-        set_drive_power (l_left_drive_power, l_right_drive_power);
 
         //
         // Manage the arm motor.
         //
         float l_gp2_left_stick_y = -gamepad2.left_stick_y;
         float l_left_arm_power = (float)scale_motor_power (l_gp2_left_stick_y);
+
+        // party button
+        // DANCE! but DANCE SAFELY IN AN OPEN AREA 
+        float partytimer;
+        // value assigned to Lb's currrent value
+        boolean partybutton = gamepad1.left_bumper;
+        
+        if (partybutton==true){
+            // sets a new random value on a clock of every 40 loop cycles
+            partytimer++;
+            if (partytimer == 40){
+                partytimer = 0;
+                float movement = Math.random();
+            }
+            // sets the bot spinning based on randomised speed
+            float minmaxleftdrive = float movement;
+            float minmaxrightdrive = -(float movement);
+            
+            //waves arm up and down randomly
+            float 1_left_arm_power = float movement;
+            
+            //activates clapping claw every 10 (or 9) cycles
+            if (  partytimer == 10 or  partytimer == 20 or partytimer == 39){
+                // clock value to open and close the claw constantly
+                boolean clap;
+                // clap++ should alternate between true or false
+                clap++;
+                //opens when clap is true
+                if (  clap = true){
+                    m_hand_position (a_hand_position () - 0.05);
+                }
+                //closes when clap is true
+                else if (clap = false){
+                    m_hand_position (a_hand_position () + 0.05);
+                }
+                
+
+            }
+        }
+
+        //setting drive powers
+        float l_left_drive_power = (float)scale_motor_power (minmaxleftdrive);
+        float l_right_drive_power = (float)scale_motor_power (minmaxrightdrive);
+        set_drive_power (l_left_drive_power, l_right_drive_power);
         v_motor_left_arm.setPower (l_left_arm_power);
 
         //----------------------------------------------------------------------
@@ -139,8 +165,8 @@ public class PushBotManualArcade extends PushBotTelemetry
         // Send telemetry data to the driver station.
         //
         update_telemetry(); // Update common telemetry
-        
-        
+        telemetry.addData ("10", "GP1 Left: " + l_gp1_left_stick_y);
+        telemetry.addData ("11", "GP1 Right: " + l_gp1_right_stick_y);
         telemetry.addData ("12", "GP2 Left: " + l_gp2_left_stick_y);
         telemetry.addData ("13", "GP2 X: " + gamepad2.x);  //blah
         telemetry.addData ("14", "GP2 Y: " + gamepad2.b);
