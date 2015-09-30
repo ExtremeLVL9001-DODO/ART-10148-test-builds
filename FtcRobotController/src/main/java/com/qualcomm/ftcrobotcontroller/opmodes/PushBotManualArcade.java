@@ -80,8 +80,8 @@ public class PushBotManualArcade extends PushBotTelemetry
         // thus capping drive speed to one
         // you will experience jankiness when you jump a 1 total in |x| + |y| as one wheel hits max speed
         // don't know how to solve that yet
-	    float minmaxleftdrive = Math.max(Math.min( leftStickX + leftStickY, 1), -1);
-        float minmaxrightdrive = Math.max(Math.min( leftStickX - leftStickY, 1), -1);
+	    float minmaxleftdrive = Math.max(Math.min( leftStickY + leftStickX, 1), -1);
+        float minmaxrightdrive = Math.max(Math.min( leftStickY - leftStickX, 1), -1);
 
         //setting drive powers
         float l_left_drive_power = (float)scale_motor_power (minmaxleftdrive);
