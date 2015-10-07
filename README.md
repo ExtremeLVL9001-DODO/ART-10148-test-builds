@@ -6,6 +6,6 @@ CHANGES IN OPMODES FOLDER
 
 
 
-(\ _(\                                                                 
+(\ _  (\                                                                 
 (@ _ @)                                             
 ,(")(")                                        
