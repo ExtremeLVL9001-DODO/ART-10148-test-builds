@@ -1,4 +1,4 @@
-ART TEAM 10148 (go team!)                                                 
+#ART TEAM 10148 (go team!)                                                 
 fellow programmers, this is where we shall put new things we try                   
 please put your test opmodes in the opmodes folder,                            
 and try to make new branches for each new idea/change                  
