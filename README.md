@@ -13,15 +13,17 @@ pps. you know you want to
 
 Team Boss: Ethan C
 
-Team Advisers:
+Team Advisers:  
+Chris X, Michelle S
 
-Chris X, Michelle S, 
+Programmers:  
+Albert L, Chloe L, Jeremy L, Shiriin A, Jason
 
-Programmers: Albert L, Chloe L, Jeremy L, Shiriin A, Jason,
+Mechanical:  
+Andy L, Meiling T, Sarena Y, Sophie I
 
-Mechanical: Andy L, Meiling T, Sarena Y, Sophie I
-
-Electrical: Ethan C
+Electrical:  
+Ethan C
 
 
 
