@@ -11,7 +11,8 @@ surprise me!!
 ps. it would be really cool if someone did the opencv for our team             
 pps. you know you want to
 
-Team Boss: Ethan C
+Team Boss:  
+Ethan C
 
 Team Advisers:  
 Chris X, Michelle S
