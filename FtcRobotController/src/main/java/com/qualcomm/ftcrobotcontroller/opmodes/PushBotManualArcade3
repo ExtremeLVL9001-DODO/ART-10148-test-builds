@@ -1,0 +1,16 @@
+package com.qualcomm.ftcrobotcontroller.opmodes;
+
+import java.lang.Math;
+
+// Arcade drive 3
+// Hw from albuerto
+
+public class PushBotManualArcade3 extends PushbotTelementary
+{
+  
+  
+  public PushBotManualArcade3 extends PushBotTelementary
+  {
+  
+  
+
